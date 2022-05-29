@@ -10,6 +10,7 @@ dataDf <- 8
 # 1.a Standard Deviation
 dataDiff <- data$Y - data$X
 dataSd <- sd(dataDiff)
+print(dataSd)
 
 # 1.b p-value from t-score
 dataTScore <- qt(p=(significance/2), df=dataDf, lower.tail = FALSE)
@@ -59,24 +60,19 @@ library("ggpubr")
 
 my_data <- read.delim(file.choose(), stringsAsFactors = T)
 
-set.seed(0)
-dplyr::sample_n(my_data, 10)
+my_data$Group <- factor(my_data$Group)
 
-newData <- my_data %>% mutate(Group = as.factor(Group))
-
-levels(newData["Group"])
-
-ggboxplot(newData, x = "Group", y = "Length",
+ggboxplot(my_data, x = "Group", y = "Length",
           color = "Group", palette = c("#00AFBB", "#E7B800", "#FC4E07"),
           order = c("1", "2", "3"),
           ylab = "Length", xlab = "Group")
 
-ggline(newData, x = "Group", y = "Length",
+ggline(my_data, x = "Group", y = "Length",
       add = c("mean_se", "jitter"),
       order = c(1, 2, 3),
       ylab = "Length", xlab = "Group")
 
-res.aov <- aov(Length ~ Group, data=newData)
+res.aov <- aov(Length ~ Group, data=my_data)
 summary(res.aov)
 TukeyHSD(res.aov)
 
