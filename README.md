@@ -1,6 +1,7 @@
 # P2_Probstat_C_5025201248
 # Soal 1
-Setelah bagian script 1 dieksekusi, akan terlihat hasil sebagai berikut
+Setelah script bagian soal 1 dieksekusi, akan terlihat hasil sebagai berikut
+
 ![Gambar 1](https://probstat.s3.ap-southeast-1.amazonaws.com/praktikum-2/1.png)
 
 Pada gambar, dapat dilihat bahwa TScore-nya yaitu 2.306 dan PValue-nya yaitu 0.000119.
@@ -8,7 +9,12 @@ Dikarenakan nilai PValue berada di luar batas kritis (9.408 s/d 23.035), maka ni
 dan setelah aktivitas A dianggap memiliki perbedaan yang signifikan, sehingga Aktivitas A dinilai berpengaruh secara signifikan secara statistika dalam hal kadar saturasi oksigen
 
 # Soal 2
+Setelah script bagian soal 2 dieksekusi, akan terlihat hasil sebagai berikut
+
 ![Gambar 2](https://probstat.s3.ap-southeast-1.amazonaws.com/praktikum-2/2.png)
+
+Pada gambar, dapat dilihat bahwa nilai TScore yaitu -1.660, dan nilai Z-nya yaitu 8.974.
+Dikarenakan nilai Z berada di dalam range penerimaan (> -1.660), maka pernyataan awal mengenai rata-rata jarak kemudi mobil > 20.000km per tahun dapat disetujui secara statistika.
 
 # Soal 3
 ![Gambar 3](https://probstat.s3.ap-southeast-1.amazonaws.com/praktikum-2/3.png)
